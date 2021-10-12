@@ -1,5 +1,5 @@
 package basic.human3;
-
+//スーパークラス
 public class HumanSample {
     public static void main(String[] args) {
         Human[] humans = {

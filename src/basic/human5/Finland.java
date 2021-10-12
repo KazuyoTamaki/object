@@ -1,11 +1,10 @@
-package basic.human4;
+package basic.human5;
 
-class Finland extends Human{
-    //private String name;
+class Finland implements ifHuman {
+    private String name;
 
     public Finland(String name) {
-        super(name);
-        //this.name = name;
+        this.name = name;
     }
 
     @Override

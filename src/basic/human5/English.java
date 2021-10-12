@@ -1,11 +1,10 @@
-package basic.human4;
+package basic.human5;
 
-class English extends Human{
-    //private String name;
+class English implements ifHuman {
+    private String name;
 
     public English(String name) {
-        super(name);
-        //this.name = name;
+        this.name = name;
     }
 
     @Override

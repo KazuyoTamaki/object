@@ -51,7 +51,7 @@ class SubSample2 extends SuperSample {
 
 class InheritanceSample1 {
     public static void main(String[] args) {
-        //スパークラスの型での宣言
+        //スーパークラスの型での宣言
         SuperSample superSample = new SuperSample(10);
         SuperSample subSample1 = new SubSample1(10);
         SuperSample subSample2 = new SubSample2(10,"abc");
