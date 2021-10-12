@@ -10,6 +10,7 @@ class FigureSample {
 
         for( Figure figure : figures ){
             System.out.println(figure);
+            //System.out.println(figure.getArea());  //これでも面積だけ出すことが可能（ただし桁数などがすごい）
         }
 
         /*
