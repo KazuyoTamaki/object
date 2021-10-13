@@ -16,13 +16,16 @@ class Student {
         this.eng = eng;
     }
 
-    public int sum(int jap, int math, int eng){
+    public int sum(){
         return jap + math + eng;
     }
 
+    public double avr(){
+        return sum() / 3.0;
+    }
 
     @Override
     public String toString() {
-        return String.format("%s %s %d %d %d %d",name,gender,jap,math,eng,);
+        return String.format("%s %s %d %d %d %d %.2f",name,gender,jap,math,eng,sum(),avr());
     }
 }
