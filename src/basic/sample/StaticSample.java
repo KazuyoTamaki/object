@@ -19,3 +19,4 @@ class StaticSample {
         System.out.println(ans);
     }
 }
+
