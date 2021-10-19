@@ -18,8 +18,24 @@ class Student {
         this.eng = eng;
     }
 
-    public String getGender() {
-        return gender.getJpName();
+    public Gender getGender() {
+        return gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getJap() {
+        return jap;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public int getEng() {
+        return eng;
     }
 
     public int sum(){
