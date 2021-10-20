@@ -19,8 +19,7 @@ class ItemSearch {
         for (Map.Entry entry : itemMap.entrySet()) {
             System.out.println(entry.getValue());
         }
-        */
-        /*
+
         for(Item items : itemMap.values()){
             System.out.println(items);
         }*/
