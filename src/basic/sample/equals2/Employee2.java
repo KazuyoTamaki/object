@@ -1,8 +1,8 @@
-package basic.sample.equals;
+package basic.sample.equals2;
 
 import java.util.Objects;
 
-public class Employee2 {
+class Employee2 {
     private int id;
     private String name;
 
