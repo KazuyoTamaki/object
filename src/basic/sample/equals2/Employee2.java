@@ -21,13 +21,13 @@ class Employee2 {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Employee2)) return false;
-        Employee2 employee2 = (Employee2) o;
-        return id == employee2.id && Objects.equals(name, employee2.name);
+        if (this == o) return true;    //Employee1と同じ
+        if (!(o instanceof Employee2)) return false; //Employee2がoのインスタンス（サブクラスも許容）「ではない」ならFalse
+        Employee2 employee2 = (Employee2) o;  //キャスト
+        return id == employee2.id && Objects.equals(name, employee2.name);//値確認 True
     }
 
-    @Override
+    @Override //HashCodeもセットで
     public int hashCode() {
         return Objects.hash(id, name);
     }

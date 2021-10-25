@@ -20,11 +20,12 @@ class Employee1 {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee1 employee1 = (Employee1) o;
-        return id == employee1.id && Objects.equals(name, employee1.name);
+    public boolean equals(Object o) {  //o:比較するオブジェクト
+        if (this == o) return true;    //同じオブジェクトならTrue
+        if (o == null || getClass() != o.getClass()) return false; //オブジェクトが空かクラス（大元）が違う→サブクラスNG設定 False
+        Employee1 employee1 = (Employee1) o;        //同じオブジェクトキャストしてみる（ここができなければ問題なので）
+        return id == employee1.id && Objects.equals(name, employee1.name); //キャスト結果が同じならOK（ここでは論理演算子でOK)
+        //idはintegerのため「==」、nameはStringなので「equals」で比較
     }
 
     @Override

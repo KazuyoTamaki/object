@@ -11,8 +11,8 @@ public class EqualsSample {
             Employee3 employee32 = new Employee3(2, "John");
 
             //比較
-            System.out.println("同一のオブジェクト:" + employee1.equals(employee12));
-            System.out.println("値が異なる:" + employee1.equals(employee13));
+            System.out.println("同一のオブジェクト:" + employee1.equals(employee12));  //参照先が同じ
+            System.out.println("値が異なる:" + employee1.equals(employee13));          //
             System.out.println("同一クラスで値も同一:" + employee1.equals(employee14));
             System.out.println("クラスが異なる" + employee1.equals(employee21));
 

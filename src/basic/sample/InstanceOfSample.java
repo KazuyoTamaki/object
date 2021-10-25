@@ -1,4 +1,10 @@
 package basic.sample;
+/*
+ SuperClass -----→ Subclass1
+               ↓
+ InterFace1 -----→ SubClass2
+
+*/
 
 class SuperClass {}
 
