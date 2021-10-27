@@ -40,19 +40,39 @@ class ViewPerson {
             }
         }
 
-        int sum = 0;
-        double avr = 0.00;
+        int sum = 0 , sumMan = 0 , sumWoman = 0;
+        int cntMan = 0 , cntWoman = 0;
+        double avr = 0.00 , avrMan = 0.00 , avrWoman = 0.00;
 
         for(Map.Entry entry : areaMap.entrySet()) {
+            sum = 0 ;
+            sumMan = 0 ;
+            sumWoman = 0;
+            avr = 0.00;
+            avrMan = 0.00 ;
+            avrWoman = 0.00;
+            cntMan = 0;
+            cntWoman = 0;
+
             for (Person person : (List<Person>) entry.getValue()) {
                 sum += person.getAge();
+                if(person.getGender().equals(Gender.MEN)){
+                    sumMan += person.getAge();
+                    cntMan ++;
+                }else if(person.getGender().equals(Gender.WOMEN)){
+                    sumWoman += person.getAge();
+                    cntWoman++;
+                }
                 //System.out.println(person);
             }
-            avr = sum/ ((List<?>) entry.getValue()).size();
-            System.out.println(((BirthPlace)entry.getKey()).getName() + " : " + avr + "歳");
+            avr = (double) sum / ((List<?>) entry.getValue()).size();
+            avrMan = (double) sumMan / cntMan;
+            avrWoman = (double) sumWoman / cntWoman;
+            System.out.println(String.format("==================%s============================================",((BirthPlace)entry.getKey()).getName()));
+            System.out.println(String.format("全体平均年齢 : %.1f  男性平均年齢 : %.1f  女性平均年齢 : %.1f", avr,avrMan ,avrWoman));
+            System.out.println(String.format("(内訳… 男性合計: %d 歳 男性人数 %d 人 女性合計 %d 歳 女性人数 %d 人)",sumMan,cntMan,sumWoman,cntWoman));
+            System.out.println("--------------------------------------------------------------------");
             //System.out.println();
-            sum = 0;
-            avr = 0.00;
         }
 
 
