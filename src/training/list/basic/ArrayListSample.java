@@ -187,14 +187,16 @@ class ArrayListSample {
         for(Integer list:list5){
             System.out.println(list);
         }
-        System.out.println("=====================list5検索① 10の存在有無======================");
+        System.out.println("=====================list5検索 10の存在有無======================");
         System.out.println(list5.contains(10));
-        System.out.println("=====================list5検索① 10,1,5の存在有無==================");
+        System.out.println("=====================list5検索 10,1,5の存在有無==================");
         list5.contains(Arrays.asList(10,1,5));
-        System.out.println("=====================list5検索① 10の前方検索======================");
+        System.out.println("=====================list5検索 10の前方検索======================");
         System.out.println(list5.indexOf(10));
-        System.out.println("=====================list5検索① 10の後方検索======================");
+        System.out.println("=====================list5検索 10の後方検索======================");
         System.out.println(list5.lastIndexOf(10));
-
+        System.out.println("=========================list5 一部抽出==========================");
+        System.out.println(list5.subList(3, 7));
+        System.out.println("==============================終了=================================");
     }
 }
