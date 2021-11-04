@@ -1,11 +1,14 @@
 package training.stringoperation;
 
+import java.util.Locale;
+
 public class StringSample {
     public static void main(String[] args) {
         //文字列の理解を深める
         String str1 = "abc";
         char data[] = {'a', 'b', 'c'};
         String str2 = new String(data);
+        String str3 = "XYZ";
 
         //表示
         System.out.println("==========================文字列表示==========================");
@@ -16,6 +19,9 @@ public class StringSample {
         System.out.println("==========================等価性比較==========================");
         System.out.println(String.format("str1 = data[] は %b です",str1.equals(data)));
         System.out.println(String.format("str1 = str2   は %b です",str1.equals(str2)));
+
+        //小文字化
+        System.out.println("str3を小文字化 変換前 : "+ str3 + "変換後 : " +  str3.toLowerCase(Locale.ROOT));
 
         //文字列結合
         System.out.println("==========================文字列結合==========================");
@@ -34,8 +40,6 @@ public class StringSample {
         System.out.println("======================.toSting無で比較======================");
         System.out.println("+とBuilder比較 : " + (str1+str2).equals(builder));
         System.out.println("Builderとconcat比較 : " + builder.equals(str1.concat(str2)));
-
-        System.out.println();
 
         //ここから分割
         String str5 = "abc def ghi jkl";
@@ -89,7 +93,7 @@ public class StringSample {
 
         //ワイルドカード
         System.out.println("======================== 正規表現 ========================");
-        String regex = "[a-z]";
+        String regex = "[a-z] [a-z] [a-z]";
         System.out.println("a-zか : " + str5.matches(regex));
         regex = "[0-9]";
         System.out.println("0-9か : " + str6.matches((regex)));
