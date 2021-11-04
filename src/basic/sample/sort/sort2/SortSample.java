@@ -1,4 +1,4 @@
-package basic.sample.sort;
+package basic.sample.sort.sort2;
 
 
 import basic.sample.enumsample.Gender;
