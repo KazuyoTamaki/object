@@ -49,7 +49,7 @@ class EquivalentTest {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EquivalentTest that = (EquivalentTest) o;
-        return jap == that.jap && eng == that.eng && math == that.math && Objects.equals(name, that.name);
+        return this.jap == that.jap && this.eng == that.eng && this.math == that.math && Objects.equals(this.name, that.name);
     }
 
     @Override
