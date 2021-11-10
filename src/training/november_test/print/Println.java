@@ -60,6 +60,21 @@ class Println {
         System.out.println(String.format(" numInt1    : %d , numInt2 : %d , numInt : %d", numInt1, numInt2,numInt3));
         System.out.println(String.format(" char1      : %c , char2 : %c ", char1,char2));
         System.out.println("============================================== 完了 ==============================================");
+
+        System.out.println();
+        System.out.println("============================================= 参照型 =============================================");
+        String str1 = "あいうえお";
+        String str2 = "みちのくのしのぶもぢずりたれゆゑに乱れそめにしわれならなくに";
+        //表示
+        System.out.println("======================================== 変数表示(println) =======================================");
+        System.out.println("str1 : " + str1);
+        System.out.println("str2 : " + str2);
+        System.out.println("======================================== 変数表示(S.format) =======================================");
+        System.out.println(String.format(" str1 : %s , str2 : %s", str1, str2));
+        System.out.println(String.format(" str1 : %-10s , str2 : %40s", str1, str2)); //表示文字数 -だと後ろがあき、正だと前があく
+        System.out.println(String.format(" str1(3) : %.3s , str2(7) : %.7s", str1, str2));
+        System.out.println("============================================== 完了 ===============================================");
+
     }
 
 
