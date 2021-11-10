@@ -1,4 +1,4 @@
-package training.november_test;
+package training.november_test.break_continue;
 
 class Continue {
     public static void main(String[] args) {
