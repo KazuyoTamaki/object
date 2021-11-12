@@ -76,7 +76,10 @@ class ExceptionBasic {
             System.out.println("e.getMessage() :"+ e.getMessage());
             //ログ表示(スタックトレース)
             e.printStackTrace();
+        } finally {
+            System.out.println("～finally～ 成功と失敗にかかわらず出ます！");
         }
+
         System.out.println("================== ファイル読込+Class 完 =================\n\n");
         System.out.println("=========================  ログ  =========================");
         /*
