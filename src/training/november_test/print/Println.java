@@ -24,6 +24,8 @@ class Println {
         char char2 = '\u3044';
         boolean boolean1 = true;
         boolean boolean2 = false;
+        Integer int99 = 10;
+
 
         //表示
         System.out.println("======================================== 変数表示(println) =======================================");
@@ -59,6 +61,7 @@ class Println {
         System.out.println(String.format(" numDouble1 : %.1f , numDouble2 : %.3f", numDouble1, numDouble2));
         System.out.println(String.format(" numInt1    : %d , numInt2 : %d , numInt : %d", numInt1, numInt2,numInt3));
         System.out.println(String.format(" char1      : %c , char2 : %c ", char1,char2));
+        System.out.println(String.format(" boolean1   : %b , boolean2 : %b ", boolean1 , boolean2));
         System.out.println("============================================== 完了 ==============================================");
 
         System.out.println();
@@ -73,6 +76,7 @@ class Println {
         System.out.println(String.format(" str1 : %s , str2 : %s", str1, str2));
         System.out.println(String.format(" str1 : %-10s , str2 : %40s", str1, str2)); //表示文字数 -だと後ろがあき、正だと前があく
         System.out.println(String.format(" str1(3) : %.3s , str2(7) : %.7s", str1, str2));
+        System.out.println(String.format(" Integer : %d ", int99));
         System.out.println("============================================== 完了 ===============================================");
 
     }

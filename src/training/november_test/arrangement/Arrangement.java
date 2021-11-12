@@ -51,6 +51,9 @@ class Arrangement {
         for(int i : arg2){
             System.out.println("arg2[] = " + i);
         }
+        System.out.println("おまけ：arg2のlength");
+        System.out.println(arg2.length);
         System.out.println("============================= 完了 ===========================");
+
     }
 }
