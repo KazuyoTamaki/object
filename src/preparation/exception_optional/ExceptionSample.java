@@ -25,7 +25,7 @@ class ExceptionSample<S> {
 
         System.out.println("============= スタックからポップ =============");
         optional = exceptionOptional.pop();
-        optElement = optional.orElse("empty");
+        optElement = optional.orElse("empty"); //処理としては使わないけど表示もできる
 
         System.out.println("----- pop実行結果検証 -----");
         if (optional.isPresent()) {
