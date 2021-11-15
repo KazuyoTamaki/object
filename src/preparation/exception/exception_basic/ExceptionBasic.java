@@ -1,4 +1,4 @@
-package preparation.exception_basic;
+package preparation.exception.exception_basic;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -89,7 +89,7 @@ class ExceptionBasic {
 	    at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
 	    at java.base/java.lang.Class.forName0(Native Method)
 	    at java.base/java.lang.Class.forName(Class.java:315)
-	    at preparation.exception_basic.ExceptionBasic.main(ExceptionBasic.java:61)
+	    at preparation.exception.exception_basic.ExceptionBasic.main(ExceptionBasic.java:61)
          */
     }
 

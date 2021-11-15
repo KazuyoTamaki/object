@@ -1,4 +1,4 @@
-package preparation.exception_throws;
+package preparation.exception.exception_throws;
 
 class ThrowsTest {
 

@@ -1,4 +1,4 @@
-package preparation.exception_optional;
+package preparation.exception.exception_optional;
 
 import java.util.ArrayList;
 import java.util.List;
