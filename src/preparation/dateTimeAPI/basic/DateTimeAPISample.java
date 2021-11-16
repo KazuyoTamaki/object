@@ -1,4 +1,4 @@
-package preparation.dateTimeAPI;
+package preparation.dateTimeAPI.basic;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
