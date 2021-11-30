@@ -28,7 +28,8 @@ class ViewStock {
             if (!storagePriceMap.containsValue(storageNo)) {          //storagePriceMapにstorageNoがない場合
                 storagePriceMap.put(storageNo, new ArrayList<>());  //新しい倉庫Noをつくる
             }                                                       //万が一一致したら上書きを行うため、念のためチェック
-            storagePriceMap.get(storageNo).add(p.getPrice());  //価格を追加
+            //storagePriceMap.put(storageNo,);//価格を追加
+            storagePriceMap.get(storageNo).add(p.getPrice());
         }
 
         //デバッグ
@@ -38,19 +39,5 @@ class ViewStock {
             System.out.print(entry.getValue() + "\n");
         }
 
-
-        //ここから勝手に作る
-        /*Map<Integer,List<PersonalComputer>> computerMap = new HashMap<>();
-
-        for(PersonalComputer pc: pcList){
-            if(!(computerMap.containsKey(pc.getUserName())) ){
-                List<pcList> list = new ArrayList();
-                list.add(pc);
-                computerMap.put(pc.getUserName(), list);
-            }
-            else{
-                computerMap.get(pc.getUserName()).add(pc);
-            }
-        }*/
     }
 }
