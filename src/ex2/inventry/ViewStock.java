@@ -25,8 +25,8 @@ class ViewStock {
         //リスト内 ここは上の初期化で実行されてるので、おそらくは実行されない。
         for (PersonalComputer p : pcList) {
             int storageNo = p.getStorageNo(); //何度も使用するため変数に格納する
-            if (!storagePriceMap.containsValue(storageNo)) {          //storagePriceMapにstorageNoがない場合
-                storagePriceMap.put(storageNo, new ArrayList<>());  //新しい倉庫Noをつくる
+            if (!storagePriceMap.containsKey(storageNo)) {          //storagePriceMapにstorageNoがない場合
+                storagePriceMap.put(storageNo, new ArrayList());  //新しい倉庫Noをつくる
             }                                                       //万が一一致したら上書きを行うため、念のためチェック
             //storagePriceMap.put(storageNo,);//価格を追加
             storagePriceMap.get(storageNo).add(p.getPrice());
