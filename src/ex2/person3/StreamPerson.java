@@ -1,10 +1,10 @@
 package ex2.person3;
 
 import basic.sample.enumsample.Gender;
+import org.w3c.dom.ls.LSOutput;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 class StreamPerson {
     public static void main(String[] args) {
@@ -25,6 +25,7 @@ class StreamPerson {
         personList.add(new Person("K", BirthPlace.FUKUOKA, Gender.WOMEN,15));
         personList.add(new Person("L", BirthPlace.FUKUOKA, Gender.WOMEN,18));
 
+        /*
         //年齢20以上の名前表示
         System.out.println("練習1");
         personList.stream()                                       //生成(stream生成)
@@ -85,5 +86,59 @@ class StreamPerson {
                 .filter(p -> p.getGender().equals(Gender.MEN))
                 .sorted(Comparator.comparing(Person::getName))
                 .forEach(System.out::println);
+        */
+        //課題6
+        System.out.println("課題6");
+        List<String> nameList = personList.stream()
+                .map(person -> person.getName())
+                .collect(Collectors.toList());
+        nameList.forEach(System.out::println);
+
+        //課題7
+        System.out.println("課題7");
+        Map<Gender,List<Person>> map = personList.stream()
+                .collect(Collectors.groupingBy(Person::getGender));
+        map.entrySet().stream() //streamの再生成
+                .map(s -> s.getKey().getJpName() + " : " + s.getValue())
+                .forEach(System.out::println);
+
+        System.out.println();
+
+        //男性で最年長を表示
+        System.out.println("課題8");
+        Optional<Person> person = personList.stream()
+                .filter(p -> p.getGender().equals(Gender.MEN))
+                .max(Comparator.comparing(Person::getAge));
+        person.ifPresent(System.out::println);
+        //person.ifPresent(p -> System.out.println(p));
+
+        System.out.println();
+
+        //女性で最年少を表示
+        System.out.println("課題9");
+        Optional<Person> person1 = personList.stream()
+                .filter(p -> p.getGender().equals(Gender.WOMEN))
+                .min(Comparator.comparing(Person::getAge));
+        person1.ifPresent(System.out::println);
+
+        System.out.println();
+
+        //女性の平均年齢
+        System.out.println("課題10");
+        OptionalDouble womanAverageAge = personList.stream()
+                .filter(p -> p.getGender().equals(Gender.WOMEN))
+                .mapToInt(Person::getAge)
+                .average();
+        womanAverageAge.ifPresent(a -> System.out.println("女性の平均年齢 : " + a));
+
+        System.out.println();
+
+        //男性の平均年齢
+        System.out.println("課題11");
+        OptionalDouble manAverageAge = personList.stream()
+                .filter(p -> p.getGender().equals(Gender.MEN))
+                .mapToInt(Person::getAge)
+                .average();
+        manAverageAge.ifPresent(a -> System.out.println("男性の平均年齢 : " + a));
     }
 }

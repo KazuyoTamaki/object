@@ -1,5 +1,7 @@
 package ex2.person3;
 
+//import basic.sample.enumsample.Gender;
+
 import basic.sample.enumsample.Gender;
 
 import java.util.ArrayList;
