@@ -1,8 +1,6 @@
 package training.person3;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class PersonView {
     public static void main(String[] args) {
