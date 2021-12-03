@@ -1,4 +1,4 @@
-package lecture;
+package lecture.tax;
 
 import java.time.LocalDate;
 

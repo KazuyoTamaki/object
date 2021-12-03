@@ -1,4 +1,4 @@
-package lecture;
+package lecture.tax;
 
 public class taxSystem {
     public static void main(String[] args) {
