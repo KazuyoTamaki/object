@@ -20,7 +20,7 @@ class ViewStock {
 
 
         //倉庫No:Int 価格:Int
-        Map<Integer, ArrayList<Integer>> storagePriceMap = new HashMap<>();
+        Map<Integer, List<Integer>> storagePriceMap = new HashMap<>();
 
         //リスト内 ここは上の初期化で実行されてるので、おそらくは実行されない。
         for (PersonalComputer p : pcList) {
@@ -37,6 +37,36 @@ class ViewStock {
         for (Map.Entry entry : storagePriceMap.entrySet()) {
             System.out.print("倉庫番号 " + entry.getKey() + ":");
             System.out.print(entry.getValue() + "\n");
+        }
+
+        System.out.println();
+
+        //倉庫ごとのPC合計金額を表示
+        System.out.println("倉庫事の合計金額");
+        for(Map.Entry entry : storagePriceMap.entrySet()) {     //①Mapから1キーごとにentryに持ってくる（合計3回回る）
+            double sum = 0;                                     //合計の宣言とクリア
+            for(Integer i : (List<Integer>)entry.getValue()){   //①のなかから値を一行ずつ取り出す(ArrayListなので複数(3)ある）
+                sum += i;                                       //金額を加算
+            }                                                   //ここでループし、キー（倉庫番号）ごとの合計を計算
+            System.out.println("倉庫番号:" + entry.getKey() + " 合計金額: " + (int)sum +"円");  //表示して次のキーへ
+        }
+
+        System.out.println();
+        System.out.println("倉庫ごとの台数");
+        for(Map.Entry entry : storagePriceMap.entrySet()){
+            int cnt = ((List)entry.getValue()).size();
+            System.out.println("倉庫番号:" + entry.getKey() + " 台数: " + cnt+"台");
+        }
+
+        System.out.println();
+        System.out.println("倉庫ごとの平均");
+        for(Map.Entry entry : storagePriceMap.entrySet()) {
+            double sum = 0;
+            for(Integer i : (List<Integer>)entry.getValue()){
+                sum += (double)i;
+            }
+            int cnt = ((List)entry.getValue()).size();
+            System.out.println("倉庫番号:" + entry.getKey() + " 平均金額: " + (int)sum / cnt +"円/台");
         }
 
     }

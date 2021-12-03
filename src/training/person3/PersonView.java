@@ -28,8 +28,15 @@ class PersonView {
         ));
 
         for (Person person : personList){
-            System.out.println(person.getName() + " " + person.getBirthplace());
+            System.out.println(person.getName() + " " + person.getBirthplace() + " " + person.getGender());
         }
+
+        Map<Integer,ArrayList<Person>> personMap = new HashMap<>();
+
+        for(Person person : personList){
+
+        }
+
 
     }
 }
